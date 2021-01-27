@@ -1,0 +1,282 @@
+<!-- <form action="">
+  <div>
+    <tr>
+      <fieldset class="rating">
+        <input
+          type="radio"
+          [name]="inputName"
+          value="5"
+          [checked]="rating === 5"
+        />
+        <label title="Rocks!" (click)="onClick(5, 'Transportation')"
+          >5 stars</label
+        >
+
+        <input
+          type="radio"
+          [name]="inputName"
+          value="4"
+          [checked]="rating === 4"
+        />
+        <label title="Pretty good" (click)="onClick(4, 'Transportation')"
+          >4 stars</label
+        >
+
+        <input
+          type="radio"
+          [name]="inputName"
+          value="3"
+          [checked]="rating === 3"
+        />
+        <label title="Meh" (click)="onClick(3, 'Transportation')"
+          >3 stars</label
+        >
+
+        <input
+          type="radio"
+          [name]="inputName"
+          value="2"
+          [checked]="rating === 2"
+        />
+        <label title="Kinda bad" (click)="onClick(2, 'Transportation')"
+          >2 stars</label
+        >
+
+        <input
+          type="radio"
+          [name]="inputName"
+          value="1"
+          [checked]="rating === 1"
+        />
+        <label title="Sucks big time" (click)="onClick(1, 'Transportation')"
+          >1 star</label
+        >
+      </fieldset>
+      <td>
+        <b>Transportation</b>
+      </td>
+    </tr>
+  </div>
+  <div>
+    <tr>
+      <fieldset class="rating">
+        <input
+          type="radio"
+          [name]="inputName"
+          value="5"
+          [checked]="rating === 5"
+        />
+        <label title="Rocks!" (click)="onClick(5, 'Food')">5 stars</label>
+
+        <input
+          type="radio"
+          [name]="inputName"
+          value="4"
+          [checked]="rating === 4"
+        />
+        <label title="Pretty good" (click)="onClick(4, 'Food')">4 stars</label>
+
+        <input
+          type="radio"
+          [name]="inputName"
+          value="3"
+          [checked]="rating === 3"
+        />
+        <label title="Meh" (click)="onClick(3, 'Food')">3 stars</label>
+
+        <input
+          type="radio"
+          [name]="inputName"
+          value="2"
+          [checked]="rating === 2"
+        />
+        <label title="Kinda bad" (click)="onClick(2, 'Food')">2 stars</label>
+
+        <input
+          type="radio"
+          [name]="inputName"
+          value="1"
+          [checked]="rating === 1"
+        />
+        <label title="Sucks big time" (click)="onClick(1, 'Food')"
+          >1 star</label
+        >
+      </fieldset>
+      <td>
+        <b>Food</b>
+      </td>
+    </tr>
+  </div>
+  <div>
+    <tr>
+      <fieldset class="rating">
+        <input
+          type="radio"
+          [name]="inputName"
+          value="5"
+          [checked]="rating === 5"
+        />
+        <label title="Rocks!" (click)="onClick(5, 'View')">5 stars</label>
+
+        <input
+          type="radio"
+          [name]="inputName"
+          value="4"
+          [checked]="rating === 4"
+        />
+        <label title="Pretty good" (click)="onClick(4, 'View')">4 stars</label>
+
+        <input
+          type="radio"
+          [name]="inputName"
+          value="3"
+          [checked]="rating === 3"
+        />
+        <label title="Meh" (click)="onClick(3, 'View')">3 stars</label>
+
+        <input
+          type="radio"
+          [name]="inputName"
+          value="2"
+          [checked]="rating === 2"
+        />
+        <label title="Kinda bad" (click)="onClick(2, 'View')">2 stars</label>
+
+        <input
+          type="radio"
+          [name]="inputName"
+          value="1"
+          [checked]="rating === 1"
+        />
+        <label title="Sucks big time" (click)="onClick(1, 'View')"
+          >1 star</label
+        >
+      </fieldset>
+      <td>
+        <b>View</b>
+      </td>
+    </tr>
+  </div>
+  <div>
+    <tr>
+      <fieldset class="rating">
+        <input
+          type="radio"
+          [name]="inputName"
+          value="5"
+          [checked]="rating === 5"
+        />
+        <label title="Rocks!" (click)="onClick(5, 'Price')">5 stars</label>
+
+        <input
+          type="radio"
+          [name]="inputName"
+          value="4"
+          [checked]="rating === 4"
+        />
+        <label title="Pretty good" (click)="onClick(4, 'Price')">4 stars</label>
+
+        <input
+          type="radio"
+          [name]="inputName"
+          value="3"
+          [checked]="rating === 3"
+        />
+        <label title="Meh" (click)="onClick(3, 'Price')">3 stars</label>
+
+        <input
+          type="radio"
+          [name]="inputName"
+          value="2"
+          [checked]="rating === 2"
+        />
+        <label title="Kinda bad" (click)="onClick(2, 'Price')">2 stars</label>
+
+        <input
+          type="radio"
+          [name]="inputName"
+          value="1"
+          [checked]="rating === 1"
+        />
+        <label title="Sucks big time" (click)="onClick(1, 'Price')"
+          >1 star</label
+        >
+      </fieldset>
+      <td>
+        <b>Price</b>
+      </td>
+    </tr>
+  </div>
+</form>
+<button
+  class="btn btn-secondary my-2 my-sm-0"
+  type="submit"
+  (click)="submitRates()"
+>
+  Oyla
+</button> -->
+
+<!--NGFOR ILE-->
+
+<div *ngFor="let ob of ct">
+  <tr>
+    <fieldset class="rating">
+      <input
+        type="radio"
+        [name]="inputName"
+        value="5"
+        [checked]="rating === 5"
+        [(ngModel)]="rates"
+      />
+      <label title="Rocks!" (click)="onClick(5, ob)">5 stars</label>
+
+      <input
+        type="radio"
+        [name]="inputName"
+        value="4"
+        [checked]="rating === 4"
+        [(ngModel)]="rates"
+      />
+      <label title="Pretty good" (click)="onClick(4, ob)">4 stars</label>
+
+      <input
+        type="radio"
+        [name]="inputName"
+        value="3"
+        [checked]="rating === 3"
+        [(ngModel)]="rates"
+      />
+      <label title="Meh" (click)="onClick(3, ob)">3 stars</label>
+
+      <input
+        type="radio"
+        [name]="inputName"
+        value="2"
+        [checked]="rating === 2"
+        [(ngModel)]="rates"
+      />
+      <label title="Kinda bad" (click)="onClick(2, ob)">2 stars</label>
+
+      <input
+        type="radio"
+        [name]="inputName"
+        value="1"
+        [checked]="rating === 1"
+        [(ngModel)]="rates"
+      />
+      <label title="Sucks big time" (click)="onClick(1, ob)">1 star</label>
+    </fieldset>
+    <td>
+      <b>
+        {{ ob }}
+      </b>
+    </td>
+  </tr>
+</div>
+<button
+  class="btn btn-secondary my-2 my-sm-0"
+  type="submit"
+  (click)="submitRates()"
+>
+  Oyla
+</button>
